@@ -15,6 +15,8 @@
 //= require underscore
 //= require backbone
 //= require bootstrap
+//= require board
+//= require game_logic
 //= require ttt
 //= require_tree ../templates
 //= require_tree ./models

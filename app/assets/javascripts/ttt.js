@@ -4,6 +4,8 @@ window.TTT = {
   Views: {},
   Routers: {},
   initialize: function() {
+		TTTgame = new window.TicTacToe.Game();
+		TTTgame.run();
 		new TTT.AppRouter();
 		Backbone.history.start();
   }
