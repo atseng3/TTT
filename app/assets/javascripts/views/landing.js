@@ -15,7 +15,7 @@ TTT.Views.Landing = Backbone.View.extend({
 	
 	render: function () {
 		var renderedContent = this.template({
-			title: "Welcome to Tic-Tac-Toe Remixed"
+			title: "Welcome to Tic-Tac-Toe -- Remixed!"
 		});
 		this.$el.html(renderedContent);
 		return this;
