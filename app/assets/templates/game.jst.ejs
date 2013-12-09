@@ -1,8 +1,8 @@
-<h1><%= title %></h1>
+<div class="page-header"><h1><%= title %></h1></div>
 <div class="game">
 	<% for(var i = 0; i < size; i++) { %>
 		<% for(var j = 0; j < size; j++) { %>
-			<div data-row="<%= i %>" data-col="<%= j %>"></div>
+			<div data-row="<%= i %>" data-col="<%= j %>" style="height: <%= dim %>px; width: <%= dim %>px; font-size: <%= dim / 20 %>em;"></div>
 		<% } %>
 	<% } %>
 </div>	

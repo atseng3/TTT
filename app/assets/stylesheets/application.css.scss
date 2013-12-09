@@ -15,16 +15,19 @@
 
 .game {
 	height: 80%;
-	width: 70%;
+	width: 80%;
+	position: relative;
 	margin: 50px;
 }
 
 .game div {
-	height: 150px;
-	width: 150px;
 	border: 5px dotted black;
 	float: left;
 	text-align: center;
-	font-size: 10.5em;
 	border-radius: 4px;	
+}
+
+.container {
+	margin-bottom: 50px;
+	padding-bottom: 50px;
 }

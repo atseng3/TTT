@@ -19,7 +19,8 @@ TTT.Views.Game = Backbone.View.extend({
 	render: function () {
 		var renderedContent = this.template({
 			title: "Welcome to Tic-Tac-Toe Remixed",
-			size: TTTgame.board.grid.length
+			size: TTTgame.board.size,
+			dim: Math.floor($('.game').width() / TTTgame.board.size)
 		});
 		this.$el.html(renderedContent);
 		return this;

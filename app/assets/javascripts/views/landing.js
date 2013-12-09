@@ -10,7 +10,6 @@ TTT.Views.Landing = Backbone.View.extend({
 		var payload = $(event.currentTarget).serializeJSON();
 		var size = parseInt(payload.game.size);
 		TTTgame = new window.TicTacToe.Game(size);
-		// TTT.game.run();
 		Backbone.history.navigate("#playGame", { trigger: true });
 	},
 	
