@@ -1,6 +1,16 @@
 TTT.AppRouter = Backbone.Router.extend({
 	routes: {
-		"": "showGame"
+		"": "showLanding",
+		"playGame": "showGame"
+	},
+	
+	showLanding: function () {
+		var landingView = new TTT.Views.Landing({
+			
+		});
+		this._swapView(landingView);
+		
+		landingView.render();
 	},
 	
 	showGame: function () {

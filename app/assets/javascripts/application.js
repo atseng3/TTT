@@ -15,6 +15,7 @@
 //= require underscore
 //= require backbone
 //= require bootstrap
+//= require jquery.serializeJSON
 //= require board
 //= require game_logic
 //= require ttt

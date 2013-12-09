@@ -1,22 +1,41 @@
 (function() {
   var TicTacToe = window.TicTacToe = (window.TicTacToe || {});
 
-  TicTacToe.Board = function(game) {
+  TicTacToe.Board = function(game, size) {
     this.game = game;
-    this.grid = new Array(3);
-    for (var i = 0; i < 3; i++) {
-      this.grid[i] = new Array(3);
+    this.grid = new Array(size);
+    for (var i = 0; i < size; i++) {
+      this.grid[i] = new Array(size);
     }
   }
+	
+	TicTacToe.Board.prototype.generateCombos = function() {
+		var size = this.grid.length;
+		combos = [];
+		var diag = [];
+		var diag2 = [];
+		for (var i = 0; i < size; i++) {
+			diag.push([i, i]);
+			diag2.push([size - 1 - i, i]);
+			var col = [];
+			var row = [];
+			for (var j = 0; j < size; j++) {
+				col.push([i, j]);
+				row.push([j, i]);
+			}
+			combos.push(col);
+			combos.push(row);
+		}
+	}
 
   TicTacToe.Board.prototype.WIN_COMBOS = [[[0, 0], [1, 1], [2, 2]],
-                    [[2, 0], [1,1], [0, 2]],
-                    [[0, 0], [0, 1], [0, 2]],
-                    [[1, 0], [1, 1], [1, 2]],
-                    [[2, 0], [2, 1], [2, 2]],
-                    [[0, 0], [1, 0], [2, 0]],
-                    [[0, 1], [1, 1], [2, 1]],
-                    [[0, 2], [1, 2], [2, 2]]]
+											                    [[2, 0], [1, 1], [0, 2]],
+											                    [[0, 0], [0, 1], [0, 2]],
+											                    [[1, 0], [1, 1], [1, 2]],
+											                    [[2, 0], [2, 1], [2, 2]],
+											                    [[0, 0], [1, 0], [2, 0]],
+											                    [[0, 1], [1, 1], [2, 1]],
+											                    [[0, 2], [1, 2], [2, 2]]]
 
   TicTacToe.Board.prototype.makeMove = function(move) {
     if (this.validMove(move)) {

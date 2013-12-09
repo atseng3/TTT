@@ -1,12 +1,8 @@
 <h1><%= title %></h1>
 <div class="game">
-	<div data-row="0" data-col="0"></div>
-	<div data-row="0" data-col="1"></div>
-	<div data-row="0" data-col="2"></div>
-	<div data-row="1" data-col="0"></div>
-	<div data-row="1" data-col="1"></div>
-	<div data-row="1" data-col="2"></div>
-	<div data-row="2" data-col="0"></div>
-	<div data-row="2" data-col="1"></div>
-	<div data-row="2" data-col="2"></div>
+	<% for(var i = 0; i < size; i++) { %>
+		<% for(var j = 0; j < size; j++) { %>
+			<div data-row="<%= i %>" data-col="<%= j %>"></div>
+		<% } %>
+	<% } %>
 </div>	

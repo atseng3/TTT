@@ -10,7 +10,6 @@ TTT.Views.Game = Backbone.View.extend({
 		var currentDiv = $(event.target);
 		var row = parseInt(currentDiv.attr('data-row'));
 		var col = parseInt(currentDiv.attr('data-col'));
-		// debugger
 		if (TTTgame.board.validMove([row, col])) {
 			currentDiv.html(TTTgame.currentMark());
 		}
@@ -19,7 +18,8 @@ TTT.Views.Game = Backbone.View.extend({
 	
 	render: function () {
 		var renderedContent = this.template({
-			title: "Welcome to Tic-Tac-Toe Remixed"
+			title: "Welcome to Tic-Tac-Toe Remixed",
+			size: TTTgame.board.grid.length
 		});
 		this.$el.html(renderedContent);
 		return this;

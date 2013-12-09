@@ -1,9 +1,9 @@
-(function(window) {
+(function() {
   var TicTacToe = window.TicTacToe = (window.TicTacToe || {});
   var Board = TicTacToe.Board;
 
-  TicTacToe.Game = function() {
-    this.board = new Board(this);
+  TicTacToe.Game = function(size) {
+    this.board = new Board(this, size);
     this.currentPlayer = 0;
   }
 
@@ -25,4 +25,4 @@
   TicTacToe.Game.prototype.currentMark = function() {
     return (this.currentPlayer === 0) ? "X" : "O";
   }
-})(window);
+})();
