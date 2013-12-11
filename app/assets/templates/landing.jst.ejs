@@ -1,14 +1,20 @@
-<div class="page-header"><h1><a href="#"><%= title %></a></h1></div>
+<div class="page-header"><h1><%= title %></h1></div>
 
 <form role="choose" class="game-size">
-<h3>Please select the type of Tic-Tac-Toe that you want to play: <select class="form-horizontal drop-down" name="game[size]" title="Select Size!">
-	<option value="3">3X3</option>
-	<option value="4">4X4</option>
-	<option value="5">5X5</option>
-	<option value="6">6X6</option>
-	<option value="7">7X7</option>
-	<option value="8">8X8</option>
-	</select>
+<h3>Please select the size of Tic-Tac-Toe that you want to play:<br>
 	
-	<button type="submit" class="btn btn-default">Go!</button></h3>
+  <div class="btn-group btn-group-lg">
+  	<button type="button" class="btn btn-default" value="3">3</button>
+  	<button type="button" class="btn btn-default" value="4">4</button>
+  	<button type="button" class="btn btn-default" value="5">5</button>
+  	<button type="button" class="btn btn-default" value="6">6</button>
+  	<button type="button" class="btn btn-default" value="7">7</button>
+  	<button type="button" class="btn btn-default" value="8">8</button>
+		<button type="button" class="btn btn-default">Type</button>
+		<input type="text" class="input-box input-lg">
+  </div>
+
+</h3>
 </form>
+
+<div class="game-content"></div>
