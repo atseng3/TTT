@@ -39,3 +39,17 @@ a {
 .input-box {
 	display: none;
 }
+
+.btn.btn-default {
+	border: 1px solid white;
+}
+
+.btn.btn-default:hover {
+	background-color: #d38e14;
+	color: white;
+}
+
+.btn.btn-default.active {
+	background-color: #d38e14;
+	color: white;
+}

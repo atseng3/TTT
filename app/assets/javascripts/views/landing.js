@@ -2,8 +2,21 @@ TTT.Views.Landing = Backbone.View.extend({
 	template: JST["landing"],
 	
 	events: {
-		"click button": "startGame"
+		"click button": "startGame",
+		"click .page-header": "buildSearchString"
 	},
+	
+	// buildSearchString: function (event) {
+	// 	event.preventDefault();
+	// 	// debugger
+	// 	var theUrl
+	// 	var xmlHttp = null;
+	// 	
+	// 	xmlHttp = new XMLHttpRequest();
+	// 	xmlHttp.open("GET", "https://www.google.com", false);
+	// 	xmlHttp.send(null);
+	// 	return xmlHttp.responseText;
+	// },
 	
 	startGame: function (event) {
 		event.preventDefault();
